@@ -1,0 +1,119 @@
+#wrapper{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid black;
+    margin-top: 10%;
+    background: rgba(40,40,40,.85);
+    overflow: scroll;
+    box-shadow: 1px 1px 1px rgb(30,30,30);
+}
+
+h1{
+    text-align: center;
+    font-family: 'Berkshire Swash', Helvetica, sans-serif;
+    color: #ededed;
+    text-shadow: 1px 1px 0px rgb(70,70,70), 4px 4px 0px rgba(0,0,0,0.3);
+    font-size: 3.0em;
+    margin-top: 15px;
+}
+
+#register-wrap{
+    width: 90%;
+    margin: auto;
+    height: 250px;
+}
+
+#login-wrap{
+    width: 90%;
+    margin: auto;
+    height: 250px;
+}
+
+
+#bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -1;
+  }
+
+
+  #bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    z-index: -1;
+  }
+
+.input-field{
+    line-height: 20px;
+    margin-bottom: -10px;
+    margin-top: -5px;
+}
+
+.reg-btn{
+    margin: auto;
+    width: 130px;
+    display: block;
+    margin-top: 10px;
+    background-color: #00838f; 
+}
+
+.log-btn{
+    margin: auto;
+    width: 130px;
+    display: block;
+    margin-top: 15px;
+    background-color: #00838f; 
+    margin-bottom: 15px;
+}
+
+.switch-link{
+    width: 400px;
+    margin: auto;
+    color: #00838f;
+    display: block;
+    text-transform: none;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px rgba(20, 20, 20,0.7);
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #00838f;
+    box-shadow: 0 1px 0 0 #00838f;
+  }
+
+.input-field{
+    font-weight: bold !important;
+    color: white !important;
+}
+
+::placeholder{
+    font-weight: normal;
+}
+
+
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #00838f;
+    box-shadow: 0 1px 0 0 #00838f;
+  }
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #00838f;
+    box-shadow: 0 1px 0 0 #00838f;
+  }
+
+.errormsg{
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px rgba(20, 20, 20,0.7);
+    color: #f44336;
+}

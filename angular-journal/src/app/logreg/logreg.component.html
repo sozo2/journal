@@ -1,0 +1,100 @@
+<div class="loginwrap">
+
+    <div id="bg">
+        <img src="{{imgsrc}}">
+      </div>
+
+  <div id="wrapper">
+      <h1>Written</h1>
+    <div id="register-wrap" *ngIf="showsignup">
+      <div class="row">
+      <form #regForm="ngForm" (submit)="registerUser(); regForm.reset()">
+
+        <div class="input-field col s12">
+          <input type="email" name="email" placeholder="Email" 
+          onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'"
+          required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+          [(ngModel)]="register.email" #email="ngModel"></div>
+        <div class="col s12 errormsg" [hidden]="email.valid || email.pristine">
+            Valid email address required.
+        </div>
+        <div class="col s12 errormsg" *ngIf="emailexists">Email already registered.</div>
+
+        <div class="input-field col s6">
+        <input type="text" name="first" placeholder="First Name"
+        onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'"
+          required pattern="[a-zA-Z][a-zA-Z ]+"
+          [(ngModel)]="register.first" #first="ngModel"><br>
+        </div>
+
+        <div class="input-field col s6">
+          <input type="text" name="last" placeholder="Last Name"
+          onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'"
+          required pattern="[a-zA-Z][a-zA-Z ]+"
+          [(ngModel)]="register.last" #last="ngModel"><br>
+          </div>
+
+          <div class="col s12 errormsg" [hidden]="first.valid || first.pristine">
+              First name is required - alphabetical characters only.
+          </div>
+          <div class="col s12 errormsg"[hidden]="last.valid || last.pristine">
+              Last name is required - alphabetical characters only.
+          </div>
+
+          <div class="input-field col s6">
+          <input type="password" name="password" placeholder="Password"
+          required minlength="8" 
+          onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'"
+          [(ngModel)]="register.password" #password="ngModel"><br>
+          </div>
+
+          <div class="input-field col s6">
+          <input  type="password" name="confirmpw" placeholder="Confirm Password"
+          onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'"
+          required
+          [(ngModel)]="register.confirmpw">
+          </div>
+          <div class="col s12 errormsg" [hidden]="password.valid || password.pristine">
+              Password must be at least 8 characters.
+          </div>
+          <div class="col s12 errormsg" *ngIf="!matching_pw">Passwords do not match.</div>
+
+          <div class="col s12">
+        <input class="reg-btn waves-effect btn" [disabled]="!regForm.valid" id="signUp" type="submit" value="Register"><br>
+          </div>
+      </form>
+      <button class="btn-flat switch-link" (click)="showlogin()">Already have an account? Log in.</button>
+    </div>
+    </div>
+
+
+    <div *ngIf="showlog" id="login-wrap">
+      <div class="row">
+      <form #loginForm="ngForm" (submit)="loginUser()">
+        <div class="input-field col s12">
+          <input type="text" name="email" placeholder="Email"
+          onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'"
+          required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+          [(ngModel)]="login.email" #loginEmail="ngModel">
+        </div>
+        <div class="col s12 errormsg" *ngIf="!registereduser">Email not registered.</div>
+        <div class="col s12 errormsg"[hidden]="loginEmail.valid || loginEmail.pristine">
+            Email not valid format.
+        </div>
+
+        <div class="input-field col s12">
+      <input type="password" name="password" placeholder="Password"
+      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'"
+        required
+        [(ngModel)]="login.password">
+        </div>
+        <div class="col s12 errormsg" *ngIf="!correctpw">Incorrect password.</div>
+        <div class="col s12">
+      <input class="log-btn waves-effect btn" [disabled]="!loginForm.valid" id="submit" type="submit" value="Login">
+        </div>
+    </form>
+    <button class="btn-flat switch-link" (click)="showreg()">Don't have an account? Sign up.</button>
+    </div></div>
+
+  </div>
+</div>

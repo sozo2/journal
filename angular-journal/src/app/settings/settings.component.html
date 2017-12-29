@@ -1,0 +1,17 @@
+<div id="header">
+    <h4 *ngIf="currentUser">Welcome, {{currentUser.firstname}}</h4>
+    <div class="button-holder">
+      <button class="icon-btn add-btn"><i class="material-icons">add</i></button>
+      <button class="icon-btn"><i class="material-icons" (click)="goDash()">home</i></button>       
+      <button class='icon-btn' (mouseenter)="dropDown()" (mouseleave)="dropDown()"><i class="material-icons seticon">settings</i> </button>
+      <div id="dropdown" (mouseenter)="dropDown()" (mouseleave)="dropDown()" [ngClass]="{'dropdownhide': hidedropdown}">
+        <div class="arrow-up"></div>
+        <button class="drop-btn" (click)="goSettings()">Settings</button>
+        <button class="drop-btn" (click)="logout()">Log Out</button>
+      </div>
+    </div>
+  </div>
+
+<div class="settings-container">
+  <h1>Welcome to user settings!!! This is where account settings can be edited!</h1>
+</div>

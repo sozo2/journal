@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { MainService } from '../main.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class SettingsComponent implements OnInit {
 
   constructor(private _mainService: MainService, private _router: Router) { }
 
@@ -57,6 +57,9 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  goDash(){
+    this._router.navigateByUrl('dashboard');
+  }
   goSettings(){
     this._router.navigateByUrl('settings');
   }

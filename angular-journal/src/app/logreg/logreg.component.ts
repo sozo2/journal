@@ -22,7 +22,32 @@ export class LogregComponent implements OnInit {
     "http://78.media.tumblr.com/ed12ef00704cd0e2ed2e1ce29dabe172/tumblr_ndyz3zz4nI1tu9tubo1_1280.jpg",
     "https://previews.123rf.com/images/smit/smit1202/smit120200042/12472860-snowy-pine-in-winter-forest-Stock-Photo.jpg",
     "https://78.media.tumblr.com/12777fe8003165284d5cfab24ee84086/tumblr_neuqsjyBcy1tsn08go1_1280.jpg",
-    "http://78.media.tumblr.com/7eb1c621158f5974c39f07f57013d0c8/tumblr_of4d0viXkX1v46987o1_1280.jpg"
+    "http://78.media.tumblr.com/7eb1c621158f5974c39f07f57013d0c8/tumblr_of4d0viXkX1v46987o1_1280.jpg",
+    "http://78.media.tumblr.com/2498d600ad4da3a758370d6e50d030d3/tumblr_o0s2cnmwLT1roalj6o1_1280.jpg",
+    "https://images.unsplash.com/photo-1486496146582-9ffcd0b2b2b7?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1503401639559-b16332601594?auto=format&fit=crop&w=1268&q=80",
+    "https://images.unsplash.com/photo-1503049555010-f8616ee8f0f3?auto=format&fit=crop&w=1770&q=80",
+    "https://images.unsplash.com/photo-1507548216198-ce23dface74c?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1442850473887-0fb77cd0b337?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1446292532430-3e76f6ab6444?auto=format&fit=crop&w=1404&q=80",
+    "https://images.unsplash.com/photo-1415639636295-61ae91a98b39?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1414510451013-d0a41fea512e?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1513343046852-84ea43694080?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1448713551278-27e64beaa3fd?auto=format&fit=crop&w=1267&q=80",
+    "https://images.unsplash.com/photo-1486239486342-c09e52de305b?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1422112528461-3186878f87dc?auto=format&fit=crop&w=1267&q=80",
+    "https://images.unsplash.com/photo-1452800211967-5baebe2b8ce2?auto=format&fit=crop&w=1778&q=80",
+    "https://images.unsplash.com/photo-1505280256396-f1791f2eb488?auto=format&fit=crop&w=1349&q=80",
+    "https://images.unsplash.com/photo-1506183915311-3c4749d0ac8e?auto=format&fit=crop&w=1267&q=80",
+    "https://images.unsplash.com/photo-1504163782861-f53c245f6086?auto=format&fit=crop&w=854&q=80",
+    "https://images.unsplash.com/photo-1433961050574-322241b350f1?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1434025697302-54853b8da166?auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1445265005361-ae273d6a1e16?auto=format&fit=crop&w=1351&q=80",
+    "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1778&q=80",
+    "https://images.unsplash.com/photo-1484935494280-c21fdf67d5cc?auto=format&fit=crop&w=1350&q=80",
+    "http://78.media.tumblr.com/df5be09dd62ca104a695505f82c63204/tumblr_nmuc7maLJU1rkvmpro1_1280.jpg"
   ]
 
   register = {
@@ -84,9 +109,6 @@ export class LogregComponent implements OnInit {
         console.log(data);
       }
       }).catch(err => console.log(err));
-      // if (!this.emailexists){
-      //   this._router.navigateByUrl('dashboard');
-      // }
     }
   }
 

@@ -8,20 +8,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { MainService } from './main.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LogregComponent,
-    DashboardComponent
+    DashboardComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
     exports: [
     RouterModule

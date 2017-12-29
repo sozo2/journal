@@ -1,2 +1,37 @@
-<h4 *ngIf="currentUser">Welcome, {{currentUser.firstname}}</h4>
-<button (click)="logout()">Log Out</button>
+<div id="header">
+  <h4 *ngIf="currentUser">Welcome, {{currentUser.firstname}}</h4>
+  <div class="button-holder">
+    <button class="icon-btn" (click)="showModal()"><i class="material-icons">add</i></button>
+    <button class="icon-btn"><i class="material-icons">home</i></button>       
+    <button class='icon-btn' (mouseenter)="dropDown()" (mouseleave)="dropDown()"><i class="material-icons seticon">settings</i> </button>
+    <div id="dropdown" (mouseenter)="dropDown()" (mouseleave)="dropDown()" [ngClass]="{'dropdownhide': hidedropdown}">
+      <div class="arrow-up"></div>
+      <button class="drop-btn" (click)="goSettings()">Settings</button>
+      <button class="drop-btn" (click)="logout()">Log Out</button>
+    </div>
+  </div>
+</div>
+
+<!-- modal box -->
+<a [ngClass]="{'lightbox': hidemodal, 'shownlightbox': !hidemodal}" class="lightbox" id="newjournal">
+  <div class="newJournal" (keydown)="handleKeyboardEvent($event)">
+    <button class="close" (click)="hideModal()">X</button>
+    <h3>Hi Modal! </h3>
+    <form>
+      <input type="hidden" (keyup.esc)="hideModal()">
+      <input type="text" name="title" placeholder="title">
+      <p>Secure?</p>
+      <p>Category</p>
+      <p>Style</p>
+      <input type="submit" value="Create">
+    </form>
+    <button (click)="hideModal()">Cancel</button>
+  </div>
+</a>
+<!-- modal box ends here -->
+
+<div class="library-container">
+  <h1>This is where my library will go!!!</h1>
+</div>
+
+

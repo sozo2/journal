@@ -20,7 +20,7 @@ var UserSchema = new mongoose.Schema({
         unique: [true, "Email already registered. Please log in or use different email."],
         match: [/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/, "Email not valid format. Please try again."]
     },
-    journals: [{
+    _journals: [{
         type: Schema.Types.ObjectId,
         ref: 'Journal'
     }],
